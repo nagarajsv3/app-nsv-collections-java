@@ -1,7 +1,8 @@
 package com.nsv.collections.map;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.nsv.collections.set.Customer;
+
+import java.util.*;
 
 public class HashMapMain {
 
@@ -33,6 +34,30 @@ public class HashMapMain {
             System.out.println(entry.getKey()+" "+entry.getValue());
         }
         System.out.println("-----------------------------------------");
+
+        Map<Customer, Integer> customerMap = new HashMap<>();
+        Customer naga = new Customer("1","Naga","Newark");
+        Customer raja = new Customer("2","Raja","Newark");
+        Customer varne = new Customer("3","Naga","Newark");
+        customerMap.put(naga,1);
+        customerMap.put(raja,2);
+        customerMap.put(varne,3);
+        System.out.println("--------------------------------------");
+        System.out.println(customerMap);
+
+        System.out.println("--------------------------------------");
+        Map<String, List<Integer>> evenNumbers = new HashMap<>();
+        evenNumbers.put("multiplesof2", Arrays.asList(2,4,6,8));
+        Map<String, List<Integer>> oddNumbers = new HashMap<>();
+        oddNumbers.put("notmultipleof2",Arrays.asList(1,3,5,7));
+
+        for (Map.Entry<String, List<Integer>> entry: evenNumbers.entrySet()) {
+            System.out.println(entry.getKey());
+
+        }
+
+
+
 
     }
 }
